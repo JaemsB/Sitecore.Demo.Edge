@@ -26,7 +26,7 @@ const AttendeeForm = (): JSX.Element => {
 
   return (
     <form className="form attendee-registration-form" onSubmit={handleFormSubmit}>
-      <h2>Attendee Registration</h2>
+      <h2>Visitor Registration</h2>
       <div className="floating-label-wrap">
         <input
           type="text"
