@@ -20,7 +20,8 @@ import 'assets/css/main.css';
 
 // DEMO TEAM CUSTOMIZATION - Implement per page layouts to conditionally load commerce on some pages https://nextjs.org/docs/basic-features/layouts#per-page-layouts
 import { NextPage } from 'next';
-
+//jamesb add tags
+import Script from 'next/script';
 type NextPageWithLayout = NextPage & {
   getLayout?: (page: ReactElement) => ReactElement;
 };
@@ -71,6 +72,16 @@ function App({ Component, pageProps, router }: AppPropsWithLayout): JSX.Element 
         <meta httpEquiv="X-UA-Compatible" content="IE=edge"></meta>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
         <meta name="description" content="Play! Summit" />
+        
+        
+<Script>
+//load TrackerJS
+!function(t,n,e,o,a){function d(t){var n=~~(Date.now()/3e5),o=document.createElement(e);o.async=!0,o.src=t+"?ts="+n;var a=document.getElementsByTagName(e)[0];a.parentNode.insertBefore(o,a)}t.MooTrackerObject=a,t[a]=t[a]||function(){return t[a].q?void t[a].q.push(arguments):void(t[a].q=[arguments])},window.attachEvent?window.attachEvent("onload",d.bind(this,o)):window.addEventListener("load",d.bind(this,o),!1)}(window,document,"script","//cdn.stat-track.com/statics/moosend-tracking.min.js","mootrack");
+//tracker has to be initialized otherwise it will generate warnings and wont sendtracking events
+mootrack('init', '53edd770-3053-4e34-bc81-3d6c4224ebac');
+mootrack('trackPageView');
+</Script>
+        
       </Head>
 
       {/* DEMO TEAM CUSTOMIZATION - CDP integration. It is important this script is rendered before the <Component> so the CDP calls made on the first page load are successful. */}
