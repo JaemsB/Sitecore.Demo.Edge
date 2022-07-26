@@ -31,7 +31,8 @@
     "noImplicitReturns": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "incremental": true
+    "incremental": true,
+    "noImplicitAny": false
   },
   "include": [
     "next-env.d.ts",
@@ -40,8 +41,5 @@
   ],
   "exclude": [
     "node_modules"
-  ],
-  {
-  "noImplicitAny": false
-}
+  ]
 }
