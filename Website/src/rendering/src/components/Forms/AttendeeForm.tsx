@@ -26,7 +26,7 @@ const AttendeeForm = (): JSX.Element => {
 
   return (
     <form className="form attendee-registration-form" onSubmit={handleFormSubmit}>
-      <h2>Customer Registration</h2>
+      <h2>Guest Registration</h2>
       <div className="floating-label-wrap">
         <input
           type="text"
@@ -67,7 +67,7 @@ const AttendeeForm = (): JSX.Element => {
       </div> */}
       <label className="checkbox-label">
         <input type="checkbox" defaultChecked={false} />
-        <span className="label-text">I wish to receive updates on the expo</span>
+        <span className="label-text">I wish to receive updates from you</span>
       </label>
       <label className="checkbox-label">
         <input type="checkbox" defaultChecked={false} />
